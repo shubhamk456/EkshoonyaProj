@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "399459978015",
+    "firebase_url": "https://ekshoonya-cb9ae.firebaseio.com",
+    "project_id": "ekshoonya-cb9ae",
+    "storage_bucket": "ekshoonya-cb9ae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399459978015:android:169b5c7240c5b693",
+        "android_client_info": {
+          "package_name": "com.example.ekshoonaya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "399459978015-nv70nlf426cjp7k3ki48fbesht99djql.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ekshoonaya",
+            "certificate_hash": "34cef1575ff4588a4ef67acae3eb1f8ccccbfb42"
+          }
+        },
+        {
+          "client_id": "399459978015-us29q1rec0mhkia26le7iopsj4kdp186.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3bfxLeup5zEs-qOIiUwB8ceBBkCVLvSE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "399459978015-us29q1rec0mhkia26le7iopsj4kdp186.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

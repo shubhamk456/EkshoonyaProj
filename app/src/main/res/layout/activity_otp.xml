@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OtpActivity">
+
+    <TextView
+        android:id="@+id/otptextView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_marginTop="8dp"
+        android:text="If it is not detected "
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/otptextView2"
+        app:layout_constraintTop_toBottomOf="@+id/otpedittext" />
+
+    <TextView
+        android:id="@+id/otptextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_marginTop="8dp"
+        android:text="Put it manually as well and press next"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/otpedittext"
+        app:layout_constraintTop_toBottomOf="@+id/otptextView11" />
+
+    <TextView
+        android:id="@+id/otptextView3"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="We will auto verify otp sent to"
+        android:textColor="#000000"
+        android:textDirection="firstStrongLtr"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        app:layout_constraintStart_toStartOf="@+id/otptextView1"
+        app:layout_constraintTop_toBottomOf="@+id/otptextView" />
+
+    <TextView
+        android:id="@+id/otptextView"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="We will auto verify otp sent to"
+        android:textColor="#000000"
+        android:textDirection="firstStrongLtr"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        app:layout_constraintStart_toStartOf="@+id/otptextView1"
+        app:layout_constraintTop_toBottomOf="@+id/otptextView1" />
+
+    <TextView
+        android:id="@+id/otptextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Please wait. "
+        android:textColor="#000000"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/otpedittext"
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:hint="OTP"
+        app:layout_constraintStart_toStartOf="@+id/otptextView3"
+        app:layout_constraintTop_toBottomOf="@+id/otptextView3" />
+
+    <Button
+        android:id="@+id/otpbutton"
+        android:layout_width="286dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="64dp"
+        android:text="NEXT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="94dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+
+</android.support.constraint.ConstraintLayout>
