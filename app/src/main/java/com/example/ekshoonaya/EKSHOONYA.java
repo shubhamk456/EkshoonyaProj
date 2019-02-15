@@ -1,8 +1,12 @@
 package com.example.ekshoonaya;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -14,9 +18,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+
 public class EKSHOONYA extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    ArrayList<Item> arrayList;
     RecyclerView recyclerView;
+    Custom_Adapter custum_adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +33,6 @@ public class EKSHOONYA extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("EKSHOONYA");
         setSupportActionBar(toolbar);
-
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -37,8 +44,27 @@ public class EKSHOONYA extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        arrayList = new ArrayList<>();
+        init(arrayList);
+        recyclerView = findViewById(R.id.recv);
+        recyclerView.setHasFixedSize(true);
+        custum_adapter = new Custom_Adapter(arrayList, this, new Custom_Adapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
 
+                Intent intent=new Intent(EKSHOONYA.this,Instructor.class);
+                Item item=arrayList.get(position);
+                intent.putExtra("Ins_name",item.inst_name);
+                intent.putExtra("Ins_Image_Id",item.ins_image);
+                intent.putExtra("Ins_Decs",item.ins_desc);
+                startActivity(intent);
 
+            }
+        });
+        recyclerView.setAdapter(custum_adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
 
 
     }
@@ -53,14 +79,13 @@ public class EKSHOONYA extends AppCompatActivity
         }
     }
 
-   /* @Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main2, menu);
         return true;
     }
-*/
-   /* @Override
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -68,12 +93,15 @@ public class EKSHOONYA extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.notification) {
+            Intent intent=new Intent(EKSHOONYA.this,NOTIFICATION.class);
+            startActivity(intent);
+
             return true;
         }
 
         return super.onOptionsItemSelected(item);
-    }*/
+    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -90,7 +118,7 @@ public class EKSHOONYA extends AppCompatActivity
         } else if (id == R.id.nav_manage) {
         }
 */
-         if (id == R.id.nav_share) {
+        if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
 
@@ -99,5 +127,16 @@ public class EKSHOONYA extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void init(ArrayList<Item> arrayList) {
+        arrayList.add(new Item(R.drawable.s_medi_pic, "Meditation","MANISH KHANDELWAL","IIT(Delhi)",R.drawable.manish));
+        arrayList.add(new Item(R.drawable.s_dance, "Dance","SHAKTI SINGH","Choreographer",R.drawable.sakti_sing));
+        arrayList.add(new Item(R.drawable.s_datascience, "Data Science","ASHISH SONI","IIT(Bombay)",R.drawable.ashish_soni));
+        arrayList.add(new Item(R.drawable.s_english, "English","RAVI KHANDELWAL","B.Tech In EC.",R.drawable.ravi));
+        arrayList.add(new Item(R.drawable.s_gmap, "Google Map","MANISH KHANDELWAL","IIT(Delhi)",R.drawable.manish));
+        arrayList.add(new Item(R.drawable.s_maths_eins, "Maths","RAVI KHANDELWAL","B.Tech In EC.",R.drawable.ravi));
+        //arrayList.add(new Item(R.drawable.s_math2, "tstststsst"));
+
     }
 }

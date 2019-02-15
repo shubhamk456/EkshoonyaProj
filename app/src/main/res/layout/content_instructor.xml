@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Instructor"
+    tools:showIn="@layout/activity_instructor">
+
+    <TextView
+
+        android:id="@+id/ins_textview"
+        android:layout_width="wrap_content"
+        android:textSize="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Instructor"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ins_nameview"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:text="MANISH KHANDELWAL"
+        app:layout_constraintEnd_toEndOf="@+id/ins_imageview"
+        app:layout_constraintStart_toStartOf="@+id/ins_imageview"
+        app:layout_constraintTop_toBottomOf="@+id/ins_imageview" />
+
+    <TextView
+        android:id="@+id/ins_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="IIT (Delhi)"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/ins_nameview"
+        app:layout_constraintStart_toStartOf="@+id/ins_nameview"
+        app:layout_constraintTop_toBottomOf="@+id/ins_nameview" />
+
+    <ImageView
+        android:id="@+id/ins_imageview"
+        android:layout_width="230dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/s_dance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ins_textview" />
+
+</android.support.constraint.ConstraintLayout>

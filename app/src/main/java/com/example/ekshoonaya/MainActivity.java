@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.Spinner;
 import com.google.firebase.FirebaseApp;
+
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
@@ -111,7 +112,7 @@ countrylist.add(new CountryItem("+61",R.drawable.ic_austraila));
         return super.onOptionsItemSelected(item);
     }
 
-  /*  @Override
+    @Override
     protected void onStart() {
         super.onStart();
 
@@ -122,6 +123,5 @@ countrylist.add(new CountryItem("+61",R.drawable.ic_austraila));
             startActivity(intent);
         }
     }
-*/
 
 }

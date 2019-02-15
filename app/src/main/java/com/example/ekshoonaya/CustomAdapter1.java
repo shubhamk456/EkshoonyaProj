@@ -50,23 +50,4 @@ public class CustomAdapter1 extends ArrayAdapter<CountryItem> {
 
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
