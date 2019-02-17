@@ -130,12 +130,13 @@ public class EKSHOONYA extends AppCompatActivity
     }
 
     public void init(ArrayList<Item> arrayList) {
-        arrayList.add(new Item(R.drawable.s_medi_pic, "Meditation","MANISH KHANDELWAL","IIT(Delhi)",R.drawable.manish));
+        arrayList.add(new Item(R.drawable.meditation_techniques, "Meditation","MANISH KHANDELWAL","IIT(Delhi)",R.drawable.manish));
         arrayList.add(new Item(R.drawable.s_dance, "Dance","SHAKTI SINGH","Choreographer",R.drawable.sakti_sing));
         arrayList.add(new Item(R.drawable.s_datascience, "Data Science","ASHISH SONI","IIT(Bombay)",R.drawable.ashish_soni));
-        arrayList.add(new Item(R.drawable.s_english, "English","RAVI KHANDELWAL","B.Tech In EC.",R.drawable.ravi));
-        arrayList.add(new Item(R.drawable.s_gmap, "Google Map","MANISH KHANDELWAL","IIT(Delhi)",R.drawable.manish));
+        arrayList.add(new Item(R.drawable.s_english, "English","Apoorv Gaur","IIT(Delhi)",R.drawable.apporva));
         arrayList.add(new Item(R.drawable.s_maths_eins, "Maths","RAVI KHANDELWAL","B.Tech In EC.",R.drawable.ravi));
+        arrayList.add(new Item(R.drawable.s_gmap, "Google Map","MANISH KHANDELWAL","IIT(Delhi)",R.drawable.manish));
+
         //arrayList.add(new Item(R.drawable.s_math2, "tstststsst"));
 
     }
