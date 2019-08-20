@@ -1,9 +1,11 @@
 package com.example.ekshoonaya;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
@@ -17,6 +19,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
@@ -123,6 +127,34 @@ public class EKSHOONYA extends AppCompatActivity
         } else if (id == R.id.nav_send) {
 
         }
+        else if(id==R.id.regis){
+            Intent intent=new Intent(this,Registration.class);
+            startActivity(intent);
+        }
+        else if(id==R.id.logout){
+            new AlertDialog.Builder(this)
+                    .setTitle("LogOut")
+                    .setMessage("Are you sure you want to Logout ?")
+
+                    // Specifying a listener allows you to take an action before dismissing the dialog.
+                    // The dialog is automatically dismissed when a dialog button is clicked.
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            // Continue with delete operation
+                            FirebaseAuth.getInstance().signOut();
+                            finish();
+
+                        }
+                    })
+
+                    // A null listener allows the button to dismiss the dialog and take no further action.
+                    .setNegativeButton(android.R.string.no, null)
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
+
+
+
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -137,7 +169,7 @@ public class EKSHOONYA extends AppCompatActivity
         arrayList.add(new Item(R.drawable.s_maths_eins, "Maths","RAVI KHANDELWAL","B.Tech In EC.",R.drawable.ravi));
         arrayList.add(new Item(R.drawable.s_gmap, "Google Map","MANISH KHANDELWAL","IIT(Delhi)",R.drawable.manish));
 
-        //arrayList.add(new Item(R.drawable.s_math2, "tstststsst"));
+
 
     }
 }

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".step_2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomLayout">
+
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/currentAddressTIL"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+
+                <EditText
+                    android:id="@+id/currentAddressET"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:hint="current address"
+                    android:inputType="textCapWords"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/permanentAddressTIL"
+                android:layout_width="fill_parent"
+
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/permanentAddressET"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:hint="permanent address"
+                    android:inputType="textCapWords"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/dojTIL"
+                android:layout_width="fill_parent"
+
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/dojET"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:hint="date of joining"
+                    android:singleLine="true"
+                    android:focusable="false"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/cityTIL"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/cityET"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:hint="city"
+                    android:inputType="textCapWords"
+                    android:maxLength="60"
+                    android:singleLine="true"
+                    android:textColor="#ff000000" />
+            </android.support.design.widget.TextInputLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:background="@color/colorPrimary"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/backBT"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="120dp"
+            android:text="back"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:background="@color/colorPrimary"
+            android:layout_alignParentRight="true"
+            android:id="@+id/nextBT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="120dp"
+            android:text="next"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>

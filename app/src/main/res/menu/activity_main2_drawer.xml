@@ -33,6 +33,19 @@
                 android:icon="@drawable/ic_menu_send"
                 android:title="Send" />
         </menu>
+
     </item>
+    <item android:title="Registration"
+        android:id="@+id/regis"
+        android:icon="@drawable/registration">
+
+
+    </item>
+    <item android:title="LogOut"
+        android:id="@+id/logout"
+        android:icon="@drawable/logout">
+
+    </item>
+
 
 </menu>
